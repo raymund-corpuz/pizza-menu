@@ -1,5 +1,6 @@
 import pizzaData from "../data";
 import "./index.css";
+//github.com/raymund-corpuz/pizza-menu.git
 
 function App() {
   return (
@@ -11,18 +12,7 @@ function App() {
           <Pizza pizzaObj={pizza} key={index} />
         ))}
       </ul>
-      {/* <Pizza
-        photo="pizzas/spinaci.jpg"
-        name="Pizza Spinaci"
-        description="Tomato,mozarella, spinach, and ricotta cheese"
-        price={10 + 3}
-      />
-      <Pizza
-        photo="pizzas/funghi.jpg"
-        name="Pizza Funghi"
-        description="Tomato,mushroom"
-        price={20}
-      /> */}
+
       <Footer />
     </div>
   );
@@ -49,7 +39,7 @@ function Pizza(props) {
 
 function Header() {
   const style = {};
-  // const style = { color: "blue", fontSize: "48px", textTransform: "uppercase" };
+
   return (
     <header className="header">
       <h1 style={style}>Fast Pizza Co.</h1>
@@ -69,16 +59,8 @@ function Footer() {
   const day = date.getDate();
   const month = date.getMonth() + 1;
   const year = date.getFullYear();
-  // const hour = new Date().getHours();
-  // const openHour = 12;
-  // const closeHour = 22;
-  const currentDate = `${day}-${month}-${year}`;
 
-  // if (hour >= openHour && closeHour <= hour) {
-  //   alert("Were are open");
-  // } else {
-  //   alert("were closed");
-  // }
+  const currentDate = `${day}-${month}-${year}`;
 
   return (
     <footer className="footer"> {currentDate} Were are currently open</footer>
